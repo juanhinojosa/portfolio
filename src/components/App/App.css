@@ -1,0 +1,316 @@
+/*ref: https://www.color-hex.com/color-palette/21044*/
+:root{
+  --soft-blue: #9cdaff;
+  --soft-purlpe-blue:#c568a5;
+  --soft-yellow:#ffd265;
+  --soft-green:#bcff7c;
+  --soft-purple:#cd94ff;
+  --fullpage-dot:#f16f6f;
+  --primary:#000;
+  --text-color: #fff;
+  --contact-form: #f2f2f2;
+  --text-normal: 200;
+  --text-bold:800;
+  --text-size-experience:2.5em;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html { 
+  scroll-behavior: smooth; 
+} 
+
+body{
+  top: 0;
+  margin-top: 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+
+/*Responsive elements*/
+@media all and (min-width:900px){
+  .my-title h1{
+    font-size: 5.0em !important;
+  }
+  .my-title span {  
+    font-size: 1.9em !important;
+  }
+  .center-content{
+    padding-top:0vh !important;
+  }
+  .experience-description{
+    /* display: block !important; */
+    top: 0 !important;
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+    padding: 0 !important;
+    width: 70vw !important;
+    height: 70vh !important;
+    float: left;
+  }
+  
+  .item-list{
+    display: block !important;
+  }
+
+  .item-list-company{
+    letter-spacing: 6px!important;
+  }
+  
+}
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+/* 
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+/* Section style  */
+.with-glitch-back{  
+  background-color: #000;
+  color: var(--text-color);  
+}
+
+.with-glitch-back::before{
+  content: "";
+  /* background-size: 100hw 100vh;
+  background-image: url('../../../public/img/glitch-background.jpg');
+  background-repeat: repeat;   */
+  position: absolute;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  opacity: 0.62;
+}
+/* 
+.my-title h1{
+  position: relative;
+  color: #ffffff;
+  font-size: 9vw;
+  font-weight: var(--text-bold);
+} */
+
+.my-title span {  
+  position: relative;
+  line-height: 5;
+  color: #ffffff;
+  font-size: 1.0em;
+  font-weight: var(--text-normal);
+}
+
+
+.section-full-page{
+  height: 100vh;
+  width: 100hw;
+}
+
+
+
+.color-section-1{
+  /* background-color: var(--soft-blue); */
+  background-color: var(--text-color);
+}
+
+.color-section-2{
+  /* background-color: var(--soft-purlpe-blue); */
+  background-color: var(--text-color);
+}
+
+.color-section-3{
+  /* background-color: var(--soft-yellow); */
+  background-color: var(--text-color);
+}
+
+.color-section-4{
+  /* background-color: var(--soft-green); */
+  background-color: var(--text-color);
+}
+.color-section-5{
+  /* background-color: var(--soft-purple); */
+  background-color: var(--primary);
+}
+
+.color-contact-form{
+  background-color: var(--contact-form);
+}
+
+
+.center-content{
+  padding-top:43vh;
+  text-align: center;
+  transition: padding-top 1.5s; /* BYO prefixes */
+}
+
+
+.experiece-title{
+  font-size: var(--text-size-experience);
+  padding: 10px;
+  letter-spacing: 6px;  
+}
+
+
+.item-list{
+  display: none;
+  text-decoration: none;
+  list-style-type: none;
+  /* margin-left: 10px; */
+}
+
+.item-list li{
+  margin: 10px;
+  text-align: center;
+  height:calc(100vh / 12);
+  line-height: calc(100vh / 12);  
+  width: 300px;
+  background-color: #000;
+  color: var(--text-color);
+  
+}
+
+.item-list li:hover{
+  background-color: var(--soft-purple);
+}
+
+
+.right-text{
+  text-align: right;
+}
+
+.left-text{
+  text-align: left;
+}
+
+.float-right{
+  float: right;
+}
+
+.float-left{
+  float:left;
+}
+
+
+.experience-description{
+  width: 95vw;
+  height: 50vh;
+  /* background-color: #fff; */
+  padding: 0px;
+  margin : 50px auto;
+}
+
+.fp-watermark{
+  display: none;
+}
+
+
+.item-list-company{
+  padding: 100px;
+  list-style-type: none;
+  color: var(--text-color);
+  font-size: small;
+  letter-spacing: 3px;
+}
+
+/*https://dev.to/peterc/how-to-create-joined-bulletpoint-lists-with-css-bbc-news-style-1eem*/
+.bullet { margin-left: -22px; width: 14px; fill:var(--fullpage-dot); float: left; padding-right: 12px }
+.bullet.big { width: 16px; margin-left: -22px; padding-right: 8px }
+/* No normal bullets please */
+.item-list-company ul {
+  list-style-type: none;
+}
+
+.item-list-company li {
+  /* You need to turn on relative positioning so the line is placed relative to the item rather than absolutely on the page */
+  position: relative;
+  /* Use padding to space things out rather than margins as the line would get broken up otherwise */
+  margin: 0;
+  padding-bottom: 2em;
+  padding-left: 21px;
+}
+
+/* The actual line being placed before each list item, tweak width and color as appropriate */
+.item-list-company li:before {
+  background-color: var(--fullpage-dot);
+  width: 2px;
+  content: '';
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 5px;
+}
+    
+/* Start the line further down on the first list item */
+.item-list-company li:first-child:before { top: 15px;  }
+
+/* Stop the line short on the final list item */
+.item-list-company li:last-child:before { height: 6px; }
+
+
+/*Contact form*/
+input[type=text], input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus{
+  border: 3px solid #555;
+}
+
+input[type=email]:focus{
+  border: 3px solid #555;
+}
+
+input[type=submit]  {
+  background-color: var(--fullpage-dot);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 90vw;
+  margin: auto;
+}
+
+input[type=submit]:hover {
+  background-color: var(--fullpage-dot);
+}
+
+
+.container {
+  border-radius: 5px;
+  background-color:var(--contact-form);
+  padding: 20px;
+}
+
+.container h3{
+  letter-spacing: 3.2px;
+  margin-bottom: 20px;
+}
+
+.container label{
+  letter-spacing: 4px;
+}

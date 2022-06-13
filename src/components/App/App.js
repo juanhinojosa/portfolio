@@ -1,7 +1,7 @@
 import { useEffect, useState,useCallback, useRef } from 'react';
 import Chart  from '../Utility/Chart';
-import './App.css';
 import '../../css/glitch-text.css';
+import './App.css';
 import '../../css/override.css'
 
 import ReactFullpage from "@fullpage/react-fullpage";
@@ -349,32 +349,40 @@ function App() {
               </div>
             </section>   
             <section className='section color-section-5 website-utiliced'>
-              <h3>This website was made with help of </h3>
+              <h3>This website was made with </h3>
               
               <div className='row'>
                 <div className='col'>
                   <img src={iconData.reactJs} width='50px' height='50px' alt='reactjslogo' />
                   <br></br>
-                  <a href='https://reactjs.org/' target='_blank'>
+                  <a href='https://reactjs.org/' target='_blank'  rel='noreferrer'>
                     React Js
                   </a>
                 </div>
                 <div className='col'>
-                  <img src={iconData.fullpage} width='50px' height='50px' alt='reactjslogo' />
+                  <img src={iconData.fullpage} height='50px' alt='fullpagelogo' />
                   <br></br>
-                  <a href='https://alvarotrigo.com/fullPage/' target='_blank' >
+                  <a href='https://alvarotrigo.com/fullPage/' target='_blank'rel='noreferrer' >
                     fullpage.js
                   </a>
                 </div>
               </div>
               <div className='row'>
                 <div className='col'>
-                  <a href='https://recharts.org/' target='_blank'>
-                    rechart.js
+                  <img src={iconData.recharts} height='40px' alt='rechartLogo'></img>
+                  <br></br>
+                  <a href='https://recharts.org/' target='_blank' rel='noreferrer'>
+                    recharts.js
                   </a>
                 </div>
                 <div className='col'>
-                  <a href='https://codepen.io/FelixRilling/pen/vNJoMy' target='_blank'>
+                  <div className='glitch-example-icon'>
+                    <h2>GLITCH</h2>
+                    <h2>GLITCH</h2>
+                    <h2>GLITCH</h2>
+                  </div>
+                  <br></br>
+                  <a href='https://codepen.io/FelixRilling/pen/vNJoMy' target='_blank' rel='noreferrer'>
                     Glitch effect by Felix Rilling 
                   </a>
                 </div>

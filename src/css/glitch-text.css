@@ -3,7 +3,8 @@
   margin: auto;
   width: 80vw;
 }
-h1 {
+
+h1,.glitch-example-icon h2 {
   text-align: center;
   color: #fff;
   font-size: 6.0vw;
@@ -27,6 +28,17 @@ h1:nth-child(3) {
   color: #f16f6f;
   animation: glitch3 2.5s infinite;
 }
+
+.glitch-example-icon h2:nth-child(2) {
+  color: #67f3da;
+  animation: glitch2 2.5s infinite;
+}
+
+.glitch-example-icon h2:nth-child(3) {
+  color: #f16f6f;
+  animation: glitch3 2.5s infinite;
+}
+
 /*Keyframes*/
 
 @keyframes glitch1 {

@@ -155,7 +155,7 @@ body{
 
 
 .center-content{
-  padding-top:43vh;
+  padding-top:5vh;
   text-align: center;
   transition: padding-top 1.5s; /* BYO prefixes */
 }
@@ -300,17 +300,83 @@ input[type=submit]:hover {
 }
 
 
-.container {
+.container-form {
   border-radius: 5px;
   background-color:var(--contact-form);
   padding: 20px;
 }
 
-.container h3{
+.container-form h3{
   letter-spacing: 3.2px;
   margin-bottom: 20px;
 }
 
-.container label{
+.container-form label{
   letter-spacing: 4px;
+}
+
+.slide-company-worked h3{
+  margin-left: 20px;
+  padding: 0;
+  color: var(--fullpage-dot);
+  font-size: 2.0em;
+  font-weight: var(--text-bold);
+  letter-spacing: 8px;
+}
+
+.slide-company-worked {
+  color: var(--text-color);
+  font-weight: var(--text-normal);
+}
+
+.slide-company-worked  span{
+  margin-left: 20px;
+  display: block;
+}
+.slide-company-worked .span-city{
+  font-style: italic ;
+}
+
+.slide-company-worked .label-detail{
+  color: var(--fullpage-dot);
+}
+.slide-company-worked ul{
+  margin: 10px;
+  margin-top: 50px;
+  list-style: none;
+}
+
+.item-list-company-experience{
+  padding: 10px;
+  list-style-type: none;
+  color: var(--text-color);
+  font-size: small;
+  letter-spacing: 2px;
+}
+.item-list-company-experience li{
+  margin-bottom: 10px;
+}
+
+
+.website-utiliced{
+  color: var(--contact-form);
+}
+
+.website-utiliced a{
+  color: var(--contact-form);
+  text-decoration: none;
+}
+.website-utiliced a::before{
+  color: var(--contact-form);
+}
+
+.row {
+  width: 100vw;
+  display: inline-block;
+  
+}
+.col{
+  display: block;
+  float: left;
+  width: 50vw;
 }

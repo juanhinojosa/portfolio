@@ -6,6 +6,11 @@ import '../../css/override.css'
 
 import ReactFullpage from "@fullpage/react-fullpage";
 
+const iconData={
+  reactJs:'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K',
+  fullpage:'https://raw.githubusercontent.com/alvarotrigo/fullPage.js/master/examples/imgs/intro.png',
+  recharts:'https://shkarina.me/Recharts.png',
+}
 
 const sectionAvaileble=[
   'header',
@@ -177,41 +182,159 @@ function App() {
               </section>
             </div>
             <section className='section color-section-5' >
-              <ul className='item-list-company'>
-                <li>
-                  <div class="bullet big">
-                    <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><path d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"></path><circle cx="16" cy="16" r="6"></circle></svg>
-                  </div>
-                  FREELANCE
-                </li>
-                <li>
-                  <div class="bullet">
-                    <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><circle stroke="none" cx="16" cy="16" r="10"></circle></svg>
-                  </div>
-                  BOREALIS SPA</li>
-                <li>
-                  <div class="bullet">
-                    <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><circle stroke="none" cx="16" cy="16" r="10"></circle></svg>
-                  </div>
-                  ARIZTIA
-                </li>
-                <li>
-                  <div class="bullet">
-                    <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><circle stroke="none" cx="16" cy="16" r="10"></circle></svg>
-                  </div>
-                  INGEMAX
-                </li>
-                <li>
-                  <div class="bullet">
-                    <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><circle stroke="none" cx="16" cy="16" r="10"></circle></svg>
-                  </div>
-                  DUOC UC
-                </li>
-              </ul>
+              <div className='slide '>
+                <ul className='item-list-company'>
+                  <li>
+                    <div class="bullet big">
+                      <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><path d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"></path><circle cx="16" cy="16" r="6"></circle></svg>
+                    </div>
+                    FREELANCE
+                  </li>
+                  <li>
+                    <div class="bullet">
+                      <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><circle stroke="none" cx="16" cy="16" r="10"></circle></svg>
+                    </div>
+                    BOREALIS SPA</li>
+                  <li>
+                    <div class="bullet">
+                      <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><circle stroke="none" cx="16" cy="16" r="10"></circle></svg>
+                    </div>
+                    ARIZTIA
+                  </li>
+                  <li>
+                    <div class="bullet">
+                      <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><circle stroke="none" cx="16" cy="16" r="10"></circle></svg>
+                    </div>
+                    INGEMAX
+                  </li>
+                  <li>
+                    <div class="bullet">
+                      <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><circle stroke="none" cx="16" cy="16" r="10"></circle></svg>
+                    </div>
+                    DUOC UC
+                  </li>
+                </ul>
+              </div>
+              <div className='slide slide-company-worked'>
+                  <h3>DUOC UC</h3>
+                  <span className='span-city'>
+                    <label className='label-detail'>2014 </label>
+                    - Melipilla RM, Chile.
+                  </span>
+                  <span className='span-charge'>Desarrollador</span>
+                  
+                  <ul className='item-list-company-experience'>
+                    <li>                      
+                      Software de Reclutamiento para área de Personal - CITT en conjunto con <label className='label-detail'>Ariztia</label></li>
+                    <li>
+                      Ayudantía para alumnos de primer, segundo semestre en la carrera - Melipilla, <label className='label-detail'> Duoc UC </label>
+                    </li>
+                  </ul>
+              </div>
+              <div className='slide slide-company-worked'>
+                  <h3>Ingemax ltda</h3>
+                  <span className='span-city'>
+                    <label className='label-detail'>2015 </label>
+                    - Providencia RM, Chile.
+                  </span>
+                  <span className='span-charge'>Desarrollador</span>
+                  
+                  <ul className='item-list-company-experience'>
+                    <li>                      
+                      Elaboracion de pagina web para visualizacion de facturas de software interno en <label className='label-detail'>Ingemax</label></li>
+                    <li>
+                      Modifacion de modulos de reporte en Software de facturacion
+                    </li>
+                    <li>
+                      Practica profesional realizando querys para reportes BI software <label className='label-detail'> QUANTRIX </label>
+                    </li>
+                  </ul>
+              </div>
+              <div className='slide slide-company-worked'>
+                  <h3>Agrosistemas LTDA.</h3>
+                  <span className='span-city'>
+                    <label className='label-detail'>2015 - 2018 </label>
+                    - Ariztia, Melipilla RM, Chile.
+                  </span>
+                  <span className='span-charge'>Desarrollador</span>
+                  
+                  <ul className='item-list-company-experience'>
+                    <li>                      
+                      Proyecto de integracion y automatizacion traspaso de datos 
+                      a empresa externa de <label className='label-detail'>Sistema pedidos</label> vendedores</li>
+                    <li>
+                      Mantencion a proyectos <label className='label-detail'>WEB</label> de proveedores externos TI
+                    </li>
+                    <li>
+                      Creacion de procesos automatizados para registrar documentos XML a Base de Datos para <label className='label-detail'> Business Analytics</label>
+                    </li>
+                    <li>
+                      Sistema ingreso datos detenciones maquinaria de plantas de Ariztia 
+                    </li>
+                    <li>
+                      Paso de Software Escritorio/UNIX a <label className='label-detail'>Sitio Web</label> de sistemas de uso interno en diferentes departamentos de la empresa
+                    </li>
+                    <li>
+                      Creacion y modificacion en programas inter-empresa con <label className='label-detail'> Informix 4GL </label>
+                    </li>
+                  </ul>
+              </div>
+              <div className='slide slide-company-worked'>
+                  <h3>Borealis SPA</h3>
+                  <span className='span-city'>
+                    <label className='label-detail'>2019-2020 </label>
+                    - Las Condes RM, Chile.
+                  </span>
+                  <span className='span-charge'>Desarrollador</span>
+                  
+                  <ul className='item-list-company-experience'>
+
+                    <li>                      
+                      Proyecto <label className='label-detail'>Exportaciones</label> para Ariztia, 
+                      en la que se maneja desde la administracion de la toma de pedidos hasta integraciones
+                      con <label className='label-detail'>Aduana</label> externas para generacion de documentos legales </li>
+                    <li>
+                      Correccion de errores en proyecto de <label className='label-detail'>CORFO</label> 
+                    </li>
+                    <li>
+                      Agrega modulo a Proyecto de empresa para manejo de facturaciones y procesos automaticos
+                    </li>
+                    <li>
+                      Mantencion a proyectos web en Laravel y <label className='label-detail'> .NET  </label>
+                    </li>
+                  </ul>
+              </div>
+              <div className='slide slide-company-worked'>
+                  <h3>Freelance </h3>
+                  <span className='span-city'>
+                    <label className='label-detail'>2020 - COVID - today </label>
+                    - Melipilla RM, Chile.
+                  </span>
+                  <span className='span-charge'>Desarrollador / Soporte</span>
+                  
+                  <ul className='item-list-company-experience'>
+                    <li>
+                      Proyecto personal que <label className='label-detail'>genera codigo</label> de manera automatica 
+                      basado en un modelo de datos en pseudocodigo personalizado                                                                
+                    </li>
+                    <li>
+                      Creacion de tienda online para <label className='label-detail'> Dropshipping</label> 
+                    </li>
+                    <li>
+                      Maquetacion UI y prototipo app movil con Flutter de proyecto<label className='label-detail'> Red Social - Trabajo</label> para Tatuadores y Clientes
+                    </li>
+                    <li>
+                      Trabajo de <label className='label-detail'>Soporte</label> esporadicamente
+                    </li>
+                    <li>
+                      Ayudante administrativo en empresa familiar
+                    </li>
+                  </ul>
+              </div>
             </section>
             <section className='section fp-noscroll color-contact-form'>
               
-              <div className="container">
+              <div className="container-form">
                 <h3 className='experiece-title'>CONTACT ME</h3>
                 <label for="fname">YOUR NAME</label>
                 <input type="text" id="fname" className="firstname" placeholder="Your name.." />
@@ -224,9 +347,38 @@ function App() {
 
                 <input type="submit" value="Send"/>
               </div>
-            </section>            
-            <section>          
-              {/* <a href="https://www.freepik.com/photos/glitch-texture">Glitch texture photo created by rawpixel.com - www.freepik.com</a> */}
+            </section>   
+            <section className='section color-section-5 website-utiliced'>
+              <h3>This website was made with help of </h3>
+              
+              <div className='row'>
+                <div className='col'>
+                  <img src={iconData.reactJs} width='50px' height='50px' alt='reactjslogo' />
+                  <br></br>
+                  <a href='https://reactjs.org/' target='_blank'>
+                    React Js
+                  </a>
+                </div>
+                <div className='col'>
+                  <img src={iconData.fullpage} width='50px' height='50px' alt='reactjslogo' />
+                  <br></br>
+                  <a href='https://alvarotrigo.com/fullPage/' target='_blank' >
+                    fullpage.js
+                  </a>
+                </div>
+              </div>
+              <div className='row'>
+                <div className='col'>
+                  <a href='https://recharts.org/' target='_blank'>
+                    rechart.js
+                  </a>
+                </div>
+                <div className='col'>
+                  <a href='https://codepen.io/FelixRilling/pen/vNJoMy' target='_blank'>
+                    Glitch effect by Felix Rilling 
+                  </a>
+                </div>
+              </div>
             </section>
           </ReactFullpage.Wrapper>
         );

@@ -5,15 +5,31 @@ import App from './components/App/App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter, Route, Routes,Router  } from 'react-router-dom';
 
+/*alert import*/
+import { positions, Provider } from "react-alert";
+import AlertTemplate from "react-alert-template-basic";
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const options = {
+  timeout: 5000,
+  position: positions.BOTTOM_CENTER
+};
+
+const AppRender = () => (
+  <Provider template={AlertTemplate} {...options}>
+    <App />
+  </Provider>
+);
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
           <Routes>
             {/* <Route path="/" element={<Nav />}> -> ejemplo para implementar menu navegador */}
             <Route path="/">
-              <Route index element={<App/>} />    
-              <Route path='/portfolio' element={<App/>} />   
+              <Route index element={<AppRender/>} />    
+              <Route path='/portfolio' element={<AppRender/>} />   
             </Route>
           </Routes>
         </BrowserRouter>

@@ -1,10 +1,12 @@
 import { useEffect, useState,useCallback, useRef } from 'react';
 import Chart  from '../Utility/Chart';
+import { useAlert } from "react-alert";
 import '../../css/glitch-text.css';
 import './App.css';
 import '../../css/override.css'
 
 import ReactFullpage from "@fullpage/react-fullpage";
+import emailjs from 'emailjs-com';
 
 const iconData={
   reactJs:'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K',
@@ -22,11 +24,26 @@ const sectionAvaileble=[
 
 function App() {
 
-  
+  const alert = useAlert();
   const refHeader = useRef(null);  
   const refExp1 =useRef(null);
   const [y, setY] = useState(window.scrollY);
   const [lastDirection,setLastDirection] = useState();
+  
+  const [formData, updateFormData] = useState({
+    fname:'',
+    fmail:'',
+    fmessage:''
+  });
+
+  const handleChange = (e) => {
+    updateFormData({
+      ...formData,
+
+      // Trimming any whitespace
+      [e.target.name]: e.target.value.trim()
+    });
+  };
 
   const handleNavigation = useCallback(
     (e) => {
@@ -72,6 +89,58 @@ function App() {
     }
 
   },[lastDirection]);
+
+  function submitContact(e){
+    e.preventDefault();
+    emailjs.sendForm(process.env.REACT_APP_MAIL_SERVICE,
+      process.env.REACT_APP_MAIL_TEMPLATE,
+      e.target,
+      process.env.REACT_APP_MAIL_USER)
+    .then(res  =>{
+      // console.log(res);
+      if(res.status === 200){
+        alert.success("Mensaje enviado correctamente");
+        // clean form 
+        formData.fname='';
+        formData.fmail='';
+        formData.fmessage='';
+        updateFormData({
+          ...formData
+        });
+      }else{
+        alert.error("Error al enviar mensaje, "+res.text)
+      }
+
+    }).catch(error => {
+      console.log(error);
+      alert.error("Error al enviar mensaje, "+error)
+    });
+    /*for test without send email*/
+    // var res ={
+    //   "status": 200,
+    //   "text": "OK"
+    // }
+
+    // if(res.status === 200){
+    //   alert.success("Mensaje enviado correctamente");
+    //   // clean form 
+    //   formData.fname='';
+    //   formData.fmail='';
+    //   formData.fmessage='';
+    //   updateFormData({
+    //     ...formData
+    //   });
+    // }else{
+    //   alert.error("Error al enviar mensaje, "+res.text)
+    // }
+    e.target.reset();
+
+  }
+
+  // useEffect(()=>{
+
+  // },[formData]);
+
 
   const anchors = ["Myself", "frontEnd", "BackEnd", "DataBase", "Integration"];
 
@@ -334,19 +403,19 @@ function App() {
             </section>
             <section className='section fp-noscroll color-contact-form'>
               
-              <div className="container-form">
+              <form className="container-form"  onSubmit={submitContact} >
                 <h3 className='experiece-title'>CONTACT ME</h3>
                 <label for="fname">YOUR NAME</label>
-                <input type="text" id="fname" className="firstname" placeholder="Your name.." />
+                <input type="text" name='fname' id="fname" defaultValue={formData.fname}  onChange={handleChange} className="firstname" placeholder="Your name.." />
 
-                <label for="lname">MAIL</label>
-                <input type="email" id="lname" className="lastname" placeholder="example@uwu.cl" />
+                <label for="fmail">MAIL</label>
+                <input type="email" name='fmail' id="fmail" defaultValue={formData.fmail} onChange={handleChange} className="lastname" placeholder="example@uwu.cl" />
 
                 <label for="subject">MESSAGE</label>
-                <textarea id="subject" className="subject" placeholder="Write something.." rows={10} ></textarea>
+                <textarea id="subject" name='fmessage'  defaultValue={formData.fmessage}  onChange={handleChange} className="subject" placeholder="Write something.." rows={10} ></textarea>
 
                 <input type="submit" value="Send"/>
-              </div>
+              </form>
             </section>   
             <section className='section color-section-5 website-utiliced'>
               <h3>This website was made with </h3>

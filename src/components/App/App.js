@@ -203,6 +203,7 @@ function App() {
                     <li>Informix 4GL</li>
                     <li>Java</li>
                     <li>Laravel - PHP</li>
+                    <li>AWS</li>
                   </ul>
                 </div>
                 <div className=''>
@@ -256,6 +257,18 @@ function App() {
                   <li>
                     <div class="bullet big">
                       <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><path d="M16 4c6.6 0 12 5.4 12 12s-5.4 12-12 12S4 22.6 4 16 9.4 4 16 4zm0-4C7.2 0 0 7.2 0 16s7.2 16 16 16 16-7.2 16-16S24.8 0 16 0z"></path><circle cx="16" cy="16" r="6"></circle></svg>
+                    </div>
+                    INFO-UPDATE (DOE.cl)
+                  </li>
+                  <li>
+                    <div class="bullet">
+                      <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><circle stroke="none" cx="16" cy="16" r="10"></circle></svg>
+                    </div>
+                    NORTEC-APP
+                  </li>
+                  <li>
+                    <div class="bullet">
+                      <svg aria-hidden="true" viewBox="0 0 32 32" focusable="false"><circle stroke="none" cx="16" cy="16" r="10"></circle></svg>
                     </div>
                     FREELANCE
                   </li>
@@ -397,6 +410,44 @@ function App() {
                     </li>
                     <li>
                       Ayudante administrativo en empresa familiar
+                    </li>
+                  </ul>
+              </div>
+              <div className='slide slide-company-worked'>
+                  <h3>NORTEC-APP </h3>
+                  <span className='span-city'>
+                    <label className='label-detail'>2022 - 2022 </label>
+                    - Melipilla RM, Chile.
+                  </span>
+                  <span className='span-charge'>Desarrollador .NET</span>
+                  
+                  <ul className='item-list-company-experience'>
+                    <li>
+                      Proyecto orientado a seguridad de personas dentro de recintos <label className='label-detail'> mineros/logisticos</label> de manera automatica 
+                      con tecnologia Becon Bluetooth en Smarthphone y Gateways por sectores                                                                
+                    </li>                    
+                  </ul>
+              </div>
+              <div className='slide slide-company-worked'>
+                  <h3>Info-Update (Doe.cl) </h3>
+                  <span className='span-city'>
+                    <label className='label-detail'>2022 - today </label>
+                    - Santiago RM, Chile (Remoto).
+                  </span>
+                  <span className='span-charge'>Desarrollador Senior .NET</span>
+                  
+                  <ul className='item-list-company-experience'>
+                    <li>
+                      Mantencion de Sistemas actuales de la empresa desarrollados en <label className='label-detail'>tecnologia .NET</label>    
+                    </li>
+                    <li>
+                      Creacion de nuevos proyectos relacionados a <label className='label-detail'>Registro de Empresa y Sociedades   </label> necesarios en procesos/data diarios 
+                    </li>
+                    <li>
+                      Implementacion y automatizacion de procesos <label className='label-detail'>Lambda AWS </label>necesarios para la infraestructura de sistemas actuales 
+                    </li>
+                    <li>
+                      Soporte y mantencion continua de sistemas existentes
                     </li>
                   </ul>
               </div>

@@ -3,7 +3,7 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 import {HTML5Icon,CSSIcon,JavascriptIcon,ReactjsIcon,VueJsIcon,AdobeXdIcon,
         CsharpIcon,NetcoreIcon,InformixIcon,JavaIcon,LaravelIcon,
         MysqlIcon,PostgresqlIcon,SqlserverIcon,
-        PentahoIcon,XmlIcon,JsonIcon} from '../../components/Utility/Icons';
+        PentahoIcon,XmlIcon,JsonIcon, AwsIcon} from '../../components/Utility/Icons';
 
 import HTMLSvg from '../../img/HTML5_logo.svg'
 
@@ -74,6 +74,12 @@ const dataFrontEnd = [
   {
     subject: 'Laravel - PHP',
     A: 20,
+    B: 0,
+    fullMark: 100,
+  },
+  {
+    subject: 'AWS',
+    A: 50,
     B: 0,
     fullMark: 100,
   }
@@ -280,6 +286,13 @@ function Chart ({option}){
         height = 356;
         width = 356;
         renderIcon = <JsonIcon/>;
+        break;
+      case 'AWS':
+        rendery = rendery -5 ;
+        renderx = renderx -20;
+        height = 60;
+        width = 60;
+        renderIcon = <AwsIcon/>;
         break;
       default:
         renderIcon = '';

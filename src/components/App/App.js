@@ -431,7 +431,7 @@ function App() {
               <div className='slide slide-company-worked'>
                   <h3>Info-Update (Doe.cl) </h3>
                   <span className='span-city'>
-                    <label className='label-detail'>2022 - today </label>
+                    <label className='label-detail'>2022 - Actualidad </label>
                     - Santiago RM, Chile (Remoto).
                   </span>
                   <span className='span-charge'>Desarrollador Senior .NET</span>

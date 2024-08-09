@@ -3,7 +3,7 @@ import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Responsi
 import {HTML5Icon,CSSIcon,JavascriptIcon,ReactjsIcon,VueJsIcon,AdobeXdIcon,
         CsharpIcon,NetcoreIcon,InformixIcon,JavaIcon,LaravelIcon,
         MysqlIcon,PostgresqlIcon,SqlserverIcon,
-        PentahoIcon,XmlIcon,JsonIcon, AwsIcon} from '../../components/Utility/Icons';
+        PentahoIcon,XmlIcon,JsonIcon, AwsIcon, PythonIcon,GptIcon} from '../../components/Utility/Icons';
 
 import HTMLSvg from '../../img/HTML5_logo.svg'
 
@@ -82,6 +82,12 @@ const dataFrontEnd = [
     A: 50,
     B: 0,
     fullMark: 100,
+  },
+  {
+    subject: 'Python',
+    A: 50,
+    B: 0,
+    fullMark: 100,
   }
   ];
   const dataBase =[
@@ -113,13 +119,13 @@ const dataFrontEnd = [
     const dataIntegrations =[
         {
           subject: 'Pentaho',
-          A: 50,
+          A: 30,
           B: 0,
           fullMark: 100,
         },
         {
           subject: 'Custom XML Integration App',
-          A: 50,
+          A: 70,
           B: 0,
           fullMark: 100,
         },
@@ -129,6 +135,12 @@ const dataFrontEnd = [
           B: 0,
           fullMark: 100,
         },
+        {
+          subject: 'API OpenAI',
+          A: 70,
+          B: 0,
+          fullMark: 100,
+        }
     ];
 
 
@@ -293,6 +305,20 @@ function Chart ({option}){
         height = 60;
         width = 60;
         renderIcon = <AwsIcon/>;
+        break;
+      case 'Python':
+        rendery = rendery - 30 ;
+        renderx = renderx -40;
+        height = 60;
+        width = 60;
+        renderIcon = <PythonIcon/>;
+        break;
+      case 'API OpenAI':
+        rendery = rendery - 5 ;
+        renderx = renderx -20;
+        height = 90;
+        width = 90;
+        renderIcon = <GptIcon/>;
         break;
       default:
         renderIcon = '';

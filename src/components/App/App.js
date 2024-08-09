@@ -204,6 +204,7 @@ function App() {
                     <li>Java</li>
                     <li>Laravel - PHP</li>
                     <li>AWS</li>
+                    <li>Python</li>
                   </ul>
                 </div>
                 <div className=''>
@@ -240,6 +241,7 @@ function App() {
                     <li>Pentaho</li>
                     <li>Custom XML Integration App</li>
                     <li>Others</li>
+                    <li>API OpenAI</li>
                   </ul>
                 </div>
                 <div className=''>
@@ -448,6 +450,9 @@ function App() {
                     </li>
                     <li>
                       Soporte y mantencion continua de sistemas existentes
+                    </li>
+                    <li>
+                      Implementacion de extraccion de datos con integracion <label className='label-detail'>API - GPT de OpenAI</label> 
                     </li>
                   </ul>
               </div>
